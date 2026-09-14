@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0c10">
+
+  <title>DESIGN EXPRESS | Link in Bio</title>
+  <meta name="description" content="شركة تصميم جرافيك متخصصة في تقديم حلول إبداعية تساعد العلامات التجارية على التميز والظهور بشكل احترافي.">
+
+  <link rel="icon" type="image/png" href="Logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ============================================================
+       RESET
+       ============================================================ */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --instagram: #E1306C;
+      --facebook: #1877F2;
+      --tiktok: #00F2EA;
+      --whatsapp: #25D366;
+      --phone: #60A5FA;
+      --gold: #f5c542;
+      --gold-glow: rgba(245, 197, 66, 0.5);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', 'Tajawal', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: #1a1f28;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      transition: background-image 0.8s ease-in-out;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.30) 0%,
+        rgba(0, 0, 0, 0.40) 50%,
+        rgba(0, 0, 0, 0.55) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       BIO CONTAINER
+       ============================================================ */
+    .bio-container {
+      position: relative;
+      z-index: 10;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: rgba(15, 18, 24, 0.35);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 40px;
+      box-shadow:
+        0 25px 60px -20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+      animation: cardFadeIn 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.05);
+    }
+
+    @keyframes cardFadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       ORDER BUTTON (TOP LEFT)
+       ============================================================ */
+    .order-btn-top {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.3px;
+      color: #1a1a1a;
+      background: linear-gradient(135deg, #f5c542 0%, #e8a91a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow:
+        0 8px 20px -6px rgba(245, 197, 66, 0.5),
+        0 0 0 1px rgba(245, 197, 66, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .order-btn-top i {
+      font-size: 0.9rem;
+      transition: transform 0.35s ease;
+    }
+
+    .order-btn-top:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow:
+        0 14px 30px -8px rgba(245, 197, 66, 0.7),
+        0 0 0 1px rgba(245, 197, 66, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      background: linear-gradient(135deg, #ffd45e 0%, #f5b800 100%);
+    }
+
+    .order-btn-top:hover i {
+      transform: rotate(-15deg) scale(1.1);
+    }
+
+    .order-btn-top:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+
+    .order-btn-top::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #f5c542, #e8a91a);
+      opacity: 0;
+      z-index: -1;
+      animation: goldPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes goldPulse {
+      0%, 100% { opacity: 0; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(1.08); }
+    }
+
+    /* ============================================================
+       LOGO
+       ============================================================ */
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .circle-logo {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #2c2f36, #1e2128);
+      box-shadow:
+        0 15px 30px -10px rgba(0, 0, 0, 0.7),
+        0 0 0 4px rgba(255, 255, 255, 0.15),
+        0 0 0 5px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .circle-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .circle-logo:hover {
+      transform: scale(1.06);
+    }
+
+    /* ============================================================
+       BRAND
+       ============================================================ */
+    .brand-name {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.85rem;
+      text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.8),
+        0 1px 3px rgba(0, 0, 0, 0.9);
+    }
+
+    /* ============================================================
+       DESCRIPTION
+       ============================================================ */
+    .description {
+      text-align: center;
+      color: #e8eef7;
+      font-size: 0.93rem;
+      line-height: 1.65;
+      font-weight: 400;
+      background: rgba(0, 0, 0, 0.30);
+      padding: 0.85rem 1.1rem;
+      border-radius: 22px;
+      margin-bottom: 1.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* ============================================================
+       LINKS GRID
+       ============================================================ */
+    .links-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      width: 100%;
+    }
+
+    /* ============================================================
+       SOCIAL BUTTONS
+       ============================================================ */
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.95rem 1.1rem 0.95rem 1.35rem;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow:
+        0 8px 24px -8px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.20),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.10);
+      transition:
+        transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .social-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        transparent 45%,
+        transparent 55%,
+        rgba(255, 255, 255, 0.04) 100%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .social-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        var(--accent-color, transparent) 0%,
+        transparent 65%
+      );
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-5px) scale(1.012);
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.30);
+      box-shadow:
+        0 22px 40px -12px rgba(0, 0, 0, 0.7),
+        0 8px 16px -6px var(--accent-glow, rgba(0, 0, 0, 0.4)),
+        0 0 0 1px var(--accent-color, rgba(255, 255, 255, 0.15)),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    }
+
+    .social-btn:hover::after {
+      opacity: 0.20;
+    }
+
+    .social-btn:active {
+      transform: translateY(-2px) scale(0.99);
+      transition: transform 0.08s linear;
+    }
+
+    .social-btn .icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--accent-color, #ffffff);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      flex-shrink: 0;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.20);
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-btn .icon-wrap i {
+      font-size: 1.15rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-btn:hover .icon-wrap {
+      background: var(--accent-color, rgba(255, 255, 255, 0.20));
+      color: #ffffff;
+      border-color: var(--accent-color, rgba(255, 255, 255, 0.4));
+      box-shadow:
+        0 0 22px -4px var(--accent-color, transparent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transform: rotate(-5deg) scale(1.08);
+    }
+
+    .social-btn:hover .icon-wrap i {
+      transform: scale(1.1);
+    }
+
+    .social-btn .btn-text {
+      flex: 1;
+      text-align: right;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-btn .arrow {
+      font-size: 0.78rem;
+      opacity: 0.65;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-btn:hover .arrow {
+      opacity: 1;
+      color: var(--accent-color, #ffffff);
+      transform: translateX(-5px);
+    }
+
+    .social-btn[data-platform="instagram"] {
+      --accent-color: var(--instagram);
+      --accent-glow: rgba(225, 48, 108, 0.45);
+    }
+    .social-btn[data-platform="facebook"] {
+      --accent-color: var(--facebook);
+      --accent-glow: rgba(24, 119, 242, 0.45);
+    }
+    .social-btn[data-platform="tiktok"] {
+      --accent-color: var(--tiktok);
+      --accent-glow: rgba(0, 242, 234, 0.45);
+    }
+    .social-btn[data-platform="whatsapp"] {
+      --accent-color: var(--whatsapp);
+      --accent-glow: rgba(37, 211, 102, 0.45);
+    }
+    .social-btn[data-platform="phone"] {
+      --accent-color: var(--phone);
+      --accent-glow: rgba(96, 165, 250, 0.45);
+    }
+
+    /* ============================================================
+       DIVIDER
+       ============================================================ */
+    .divider {
+      margin: 1.4rem 0 0.9rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.30),
+        rgba(255, 255, 255, 0.60),
+        rgba(255, 255, 255, 0.30),
+        transparent
+      );
+    }
+
+    .divider-icon {
+      color: #ffffff;
+      font-size: 0.76rem;
+      letter-spacing: 2px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.30);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .divider-icon i {
+      font-size: 0.58rem;
+      opacity: 0.9;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.74rem;
+      color: #d8e1ee;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.6px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .footer .highlight {
+      color: #b9c8ff;
+      font-weight: 700;
+    }
+
+    /* ============================================================
+       FOOTER FOUNDER
+       ============================================================ */
+    .footer-founder {
+      margin-top: 0.55rem;
+      font-size: 0.68rem;
+      color: #d4b45a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
+
+    .footer-founder i {
+      font-size: 0.62rem;
+      opacity: 0.85;
+      color: #f5c542;
+    }
+
+    .footer-founder .founder-name {
+      color: #f5c542;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    /* ============================================================
+       ANIMATIONS
+       ============================================================ */
+    .social-btn,
+    .divider,
+    .footer {
+      animation: slideIn 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    }
+
+    .social-btn:nth-of-type(1) { animation-delay: 0.10s; }
+    .social-btn:nth-of-type(2) { animation-delay: 0.18s; }
+    .social-btn:nth-of-type(3) { animation-delay: 0.26s; }
+    .social-btn:nth-of-type(4) { animation-delay: 0.40s; }
+    .social-btn:nth-of-type(5) { animation-delay: 0.48s; }
+    .divider                   { animation-delay: 0.33s; }
+    .footer                    { animation-delay: 0.58s; }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .social-btn:focus-visible,
+    .order-btn-top:focus-visible {
+      outline: 2px solid #80b4ff;
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 500px) {
+      body { padding: 1.25rem 1rem; }
+
+      .bio-container {
+        padding: 1.6rem 1.1rem;
+        border-radius: 32px;
+        background: rgba(15, 18, 24, 0.40);
+      }
+
+      .order-btn-top {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.55rem 0.9rem;
+        font-size: 0.75rem;
+      }
+
+      .order-btn-top i { font-size: 0.8rem; }
+
+      .logo-wrapper { margin-top: 1.8rem; }
+
+      .brand-name { font-size: 1.6rem; }
+
+      .social-btn {
+        padding: 0.85rem 0.9rem 0.85rem 1.15rem;
+        font-size: 0.96rem;
+        border-radius: 18px;
+        gap: 0.75rem;
+      }
+
+      .social-btn .icon-wrap {
+        width: 36px;
+        height: 36px;
+        border-radius: 11px;
+      }
+
+      .social-btn .icon-wrap i { font-size: 1rem; }
+
+      .description { font-size: 0.83rem; padding: 0.75rem 0.95rem; }
+      .circle-logo { width: 88px; height: 88px; }
+      .divider-icon { font-size: 0.7rem; letter-spacing: 1.5px; }
+      .footer { margin-top: 1.6rem; font-size: 0.68rem; }
+
+      .footer-founder {
+        font-size: 0.62rem;
+        margin-top: 0.45rem;
+      }
+      .footer-founder i { font-size: 0.56rem; }
+    }
+
+    @media (max-width: 380px) {
+      .bio-container { border-radius: 26px; padding: 1.35rem 0.95rem; }
+      .brand-name { font-size: 1.4rem; }
+      .social-btn { font-size: 0.9rem; padding: 0.8rem 0.85rem 0.8rem 1rem; }
+      .order-btn-top { font-size: 0.7rem; padding: 0.5rem 0.8rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ORDER BUTTON — TOP LEFT
+       ============================================================ -->
+  <a href="order.html" class="order-btn-top" aria-label="طلب تصميم جديد">
+    <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+    <span>طلب تصميم</span>
+  </a>
+
+  <main class="bio-container" role="main">
+
+    <!-- LOGO -->
+    <div class="logo-wrapper">
+      <div class="circle-logo">
+        <img src="Logo.png" alt="شعار DESIGN EXPRESS" loading="eager">
+      </div>
+    </div>
+
+    <!-- BRAND -->
+    <h1 class="brand-name">DESIGN EXPRESS</h1>
+
+    <!-- DESCRIPTION -->
+    <p class="description">
+      شركة تصميم جرافيك متخصصة في تقديم حلول إبداعية تساعد العلامات التجارية
+      على التميز والظهور بشكل احترافي. نقدم خدمات تصميم السوشيال ميديا،
+      الهويات البصرية، والإعلانات بأسلوب عصري يجذب الانتباه ويحقق نتائج قوية.
+    </p>
+
+    <!-- LINKS -->
+    <nav class="links-grid" aria-label="روابط التواصل">
+
+      <a href="https://www.instagram.com/designexpress.9802145"
+         target="_blank" rel="noopener noreferrer"
+         class="social-btn" data-platform="instagram"
+         aria-label="زيارة حسابنا على Instagram">
+        <span class="icon-wrap" aria-hidden="true"><i class="fab fa-instagram"></i></span>
+        <span class="btn-text">Instagram</span>
+        <i class="fas fa-chevron-left arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="https://www.facebook.com/share/18mv3t3bd2/"
+         target="_blank" rel="noopener noreferrer"
+         class="social-btn" data-platform="facebook"
+         aria-label="زيارة صفحتنا على Facebook">
+        <span class="icon-wrap" aria-hidden="true"><i class="fab fa-facebook-f"></i></span>
+        <span class="btn-text">Facebook</span>
+        <i class="fas fa-chevron-left arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="https://www.tiktok.com/@designexpress200"
+         target="_blank" rel="noopener noreferrer"
+         class="social-btn" data-platform="tiktok"
+         aria-label="تابعنا على TikTok">
+        <span class="icon-wrap" aria-hidden="true"><i class="fab fa-tiktok"></i></span>
+        <span class="btn-text">TikTok</span>
+        <i class="fas fa-chevron-left arrow" aria-hidden="true"></i>
+      </a>
+
+      <div class="divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-icon">
+          <i class="fas fa-asterisk"></i>
+          تواصل معنا
+          <i class="fas fa-asterisk"></i>
+        </span>
+        <span class="divider-line"></span>
+      </div>
+
+      <a href="tel:+201159816461"
+         class="social-btn" data-platform="phone"
+         aria-label="اتصل بنا عبر الهاتف">
+        <span class="icon-wrap" aria-hidden="true"><i class="fas fa-phone-alt"></i></span>
+        <span class="btn-text">Phone Numbers</span>
+        <i class="fas fa-chevron-left arrow" aria-hidden="true"></i>
+      </a>
+
+      <a href="https://wa.me/201159816461?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85"
+         target="_blank" rel="noopener noreferrer"
+         class="social-btn" data-platform="whatsapp"
+         aria-label="تواصل معنا عبر WhatsApp">
+        <span class="icon-wrap" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
+        <span class="btn-text">Whatsapp</span>
+        <i class="fas fa-chevron-left arrow" aria-hidden="true"></i>
+      </a>
+
+    </nav>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>
+        © <span id="currentYear">2026</span>
+        <span class="highlight">DESIGN EXPRESS</span> — All rights reserved
+      </div>
+      <div class="footer-founder">
+        <i class="fas fa-crown"></i>
+        <span>Founded by</span>
+        <span class="founder-name">Abdulrahman Kamal</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============================================================
+       SCRIPT
+       ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      const BACKGROUNDS = [
+        'images/bg1.jpg',
+        'images/bg2.jpg',
+        'images/bg3.jpg',
+        'images/bg4.jpg'
+      ];
+
+      function pickRandomBackground() {
+        let lastBg = null;
+        try { lastBg = sessionStorage.getItem('lastBg'); } catch (e) {}
+        const available = BACKGROUNDS.filter(bg => bg !== lastBg);
+        const pool = available.length > 0 ? available : BACKGROUNDS;
+        const picked = pool[Math.floor(Math.random() * pool.length)];
+        try { sessionStorage.setItem('lastBg', picked); } catch (e) {}
+        return picked;
+      }
+
+      function applyBackground() {
+        const bgUrl = pickRandomBackground();
+        const img = new Image();
+        img.onload = function () {
+          document.body.style.backgroundImage = 'url("' + bgUrl + '")';
+        };
+        img.onerror = function () {
+          const fallback = BACKGROUNDS.find(b => b !== bgUrl);
+          if (fallback) {
+            const fb = new Image();
+            fb.onload = function () {
+              document.body.style.backgroundImage = 'url("' + fallback + '")';
+            };
+            fb.src = fallback;
+          }
+        };
+        img.src = bgUrl;
+      }
+
+      applyBackground();
+
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      const buttons = document.querySelectorAll('.social-btn');
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btn.animate(
+            [
+              { transform: 'translateY(-5px) scale(1.012)' },
+              { transform: 'translateY(-2px) scale(0.985)' },
+              { transform: 'translateY(0) scale(1)' }
+            ],
+            { duration: 260, easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)' }
+          );
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
